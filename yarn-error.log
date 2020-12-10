@@ -1,0 +1,74 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  14.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.npmjs.org
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+
+npm manifest: 
+  {
+    "name": "vueTaro",
+    "version": "1.0.0",
+    "private": true,
+    "description": "vue mini app",
+    "templateInfo": {
+      "name": "vue3-vuex",
+      "typescript": true,
+      "css": "less"
+    },
+    "scripts": {
+      "build:weapp": "taro build --type weapp",
+      "build:h5": "taro build --type h5",
+      "dev:weapp": "npm run build:weapp -- --watch",
+      "dev:h5": "npm run build:h5 -- --watch"
+    },
+    "browserslist": [
+      "last 3 versions",
+      "Android >= 4.1",
+      "ios >= 8"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "@babel/runtime": "^7.7.7",
+      "@tarojs/runtime": "3.0.17",
+      "@tarojs/taro": "3.0.17",
+      "@tarojs/components": "3.0.17",
+      "vuex": "^4.0.0-beta.4",
+      "vue": "^3.0.0"
+    },
+    "devDependencies": {
+      "@types/webpack-env": "^1.13.6",
+      "@tarojs/mini-runner": "3.0.17",
+      "@tarojs/webpack-runner": "3.0.17",
+      "@babel/core": "^7.8.0",
+      "babel-preset-taro": "3.0.17",
+      "@vue/compiler-sfc": "^3.0.0",
+      "vue-loader": "^16.0.0-beta.8",
+      "eslint-plugin-vue": "^7.0.0",
+      "eslint-config-taro": "3.0.17",
+      "eslint": "^6.8.0",
+      "stylelint": "9.3.0",
+      "@typescript-eslint/parser": "^2.x",
+      "@typescript-eslint/eslint-plugin": "^2.x",
+      "typescript": "^3.7.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
