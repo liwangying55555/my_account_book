@@ -11,6 +11,7 @@
         hoverClass="hover">
         <text v-if="t.type === 'number' || t.type === 'dele'">{{t.label}}</text>
         <view v-else-if="t.type === 'enter'" class="center-key">{{t.label}}</view>
+        <!-- <view v-else-if="t.type === 'enter' && calculator" class="iconfont ">{{t.label}}</view> -->
         <view v-else :class="['iconfont', t.label]"></view>
       </view>
     </view>
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import { setup } from 'vue'
+import { setup, ref } from 'vue'
 
 const number = [
   {
@@ -101,27 +102,55 @@ const number = [
 export default {
   name: 'MyCalculator',
   props: {
+    onChange: {
+      type: Function
+    }
   },
   setup (props) {
+    // 简单计算功能，假如开始计算，无法正常改变值，只有清零之后才可以
+    const total = ref(0)
+    const calculator = ref(0)
     const handleClick = (item) => {
-      switch (item.type) {
-        case 'number':
-          break
-        case 'backspace':
-          break
-        case 'add':
-          break
-        case 'minus':
-          break
-        case 'dele':
-          break
-        case 'enter':
-          break
+      if (calculator) {
+        switch (item.type) {
+          case 'number':
+            break
+          case 'backspace':
+            break
+          case 'add':
+            break
+          case 'minus':
+            break
+          case 'dele':
+            break
+          case 'enter':
+            calculator.value = 0
+            props.onChange({ total, calculator })
+            break
+        }
+      } else {
+        switch (item.type) {
+          case 'number':
+            break
+          case 'backspace':
+            break
+          case 'add':
+            break
+          case 'minus':
+            break
+          case 'dele':
+            break
+          case 'enter':
+            calculator.value = 0
+            props.onChange({ total, calculator })
+            break
+        }
       }
     }
     return {
       numberList: number,
-      handleClick
+      handleClick,
+      calculator
     }
   }
 }

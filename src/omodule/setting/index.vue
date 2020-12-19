@@ -1,5 +1,6 @@
 <template>
   <view class="color">
+    <text>我是设置页</text>
   </view>
 </template>
 
