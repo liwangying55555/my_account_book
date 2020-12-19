@@ -1,8 +1,7 @@
 {
-  "name": "vueTaro",
+  "name": "my_account_book",
   "version": "1.0.0",
-  "private": true,
-  "description": "vue mini app",
+  "description": "my_account_book",
   "templateInfo": {
     "name": "vue3-vuex",
     "typescript": true,

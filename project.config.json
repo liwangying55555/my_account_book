@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
   "projectname": "my_account_book",
-  "description": "vue mini app",
+  "description": "my_account_book",
   "appid": "wxf0f5c3928aad8253",
   "setting": {
     "urlCheck": true,
